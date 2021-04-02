@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Home from './pages/home';
 
 
 
@@ -15,9 +16,7 @@ class App extends React.Component {
     render(){
         return(
             <div className='app'>
-                {/* <Router> */}
-                  <p>Aoooba</p>
-                {/* </Router> */}
+              <Home></Home>
           </div>  
 
         );
