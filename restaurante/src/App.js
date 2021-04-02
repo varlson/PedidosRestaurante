@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/home';
 import Garcom from './pages/garcom';
 import Cozinha from './pages/cozinha'
+import Copa from './pages/copa';
 
 
 class App extends React.Component {
@@ -26,6 +27,9 @@ class App extends React.Component {
               <Cozinha>
 
               </Cozinha>
+              <Copa>
+                
+              </Copa>
           </div>  
 
         );
