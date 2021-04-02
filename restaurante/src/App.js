@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/home';
-
+import Garcom from './pages/garcom';
 
 
 class App extends React.Component {
@@ -16,7 +16,12 @@ class App extends React.Component {
     render(){
         return(
             <div className='app'>
-              <Home></Home>
+              <Home>
+                
+              </Home>
+              <Garcom>
+
+              </Garcom>
           </div>  
 
         );
