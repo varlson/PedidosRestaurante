@@ -1,35 +1,40 @@
 import React from 'react';
 import './App.css';
+import { Router, Link } from '@reach/router';
 import Home from './pages/home';
+import Cozinha from './pages/cozinha';
 import Garcom from './pages/garcom';
-import Cozinha from './pages/cozinha'
 import Copa from './pages/copa';
-
+import Breadcrumb from './breadcrumb';
 
 class App extends React.Component {
     
     constructor(param){ 
         super(param)
-        console.log("criando classe app")
-        // this.items = [
-        //     { to: '/', label:'Home'}
-        // ];
+        
+        this.items = [
+            { to: '/', label:'Home'},
+            { to: '/cozinha', label: 'Cozinha'},
+            { to: '/garcom', label: 'Garcom'},
+            { to: '/copa', label: 'Copa'},
+        ];   
     }
     render(){
         return(
             <div className='app'>
-              <Home>
-
-              </Home>
-              <Garcom>
-
-              </Garcom>
-              <Cozinha>
-
-              </Cozinha>
-              <Copa>
-                
-              </Copa>
+                <Breadcrumb>
+                {this.items.map(({ to, label }) => (
+                    <Link key={to} to={to}>
+                      {label}
+                    </Link>
+                ))}
+                </Breadcrumb>
+                <Router>
+                    <Home path='/'/>
+                    <Cozinha path='/cozinha'/>
+                    <Garcom path='/garcom'/>
+                    <Copa path='/copa'/>
+                </Router>
           </div>  
 
         );
